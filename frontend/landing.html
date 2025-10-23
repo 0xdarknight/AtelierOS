@@ -6,89 +6,216 @@
     <title>ATELIER OS</title>
     <link rel="stylesheet" href="landing-styles.css">
 </head>
-<body class="landing-only">
+<body>
 
-    <!-- Runway Lights Animation -->
-    <div class="runway-lights">
-        <div class="light" style="--delay: 0s"></div>
-        <div class="light" style="--delay: 0.1s"></div>
-        <div class="light" style="--delay: 0.2s"></div>
-        <div class="light" style="--delay: 0.3s"></div>
-        <div class="light" style="--delay: 0.4s"></div>
+    <!-- Cinematic Video Background -->
+    <div class="runway-video-bg">
+        <div class="video-overlay"></div>
     </div>
 
-    <!-- Main Landing -->
-    <main class="landing-main">
-        <div class="landing-content">
+    <!-- Spotlight Scan -->
+    <div class="spotlight-scanner"></div>
 
-            <!-- Brand Lockup -->
-            <div class="brand-lockup">
-                <div class="brand-diamond">◆</div>
-                <h1 class="brand-title">ATELIER OS</h1>
-                <div class="brand-subtitle">Intelligence Infrastructure for Fashion</div>
+    <!-- Fashion Grid Background -->
+    <div class="fashion-grid">
+        <div class="grid-line vertical"></div>
+        <div class="grid-line vertical"></div>
+        <div class="grid-line vertical"></div>
+        <div class="grid-line horizontal"></div>
+        <div class="grid-line horizontal"></div>
+    </div>
+
+    <!-- Main Stage -->
+    <main class="runway-stage">
+
+        <!-- Act I: The Opening -->
+        <section class="act act-opening">
+            <div class="collection-label">
+                <span class="label-line"></span>
+                <span class="label-text">ATELIER OS</span>
+                <span class="label-line"></span>
             </div>
 
-            <!-- Season Label -->
-            <div class="season-badge">
-                <span class="season-text">ASI Alliance Collection</span>
-                <span class="season-divider">·</span>
-                <span class="season-year">2025</span>
+            <h1 class="runway-title">
+                <span class="title-word" style="--delay: 0.1s">THE</span>
+                <span class="title-word" style="--delay: 0.2s">MULTI-AGENT</span>
+                <span class="title-word" style="--delay: 0.3s">OPERATING</span>
+                <span class="title-word" style="--delay: 0.4s">SYSTEM</span>
+            </h1>
+
+            <div class="collection-year">2025</div>
+
+            <div class="scroll-indicator">
+                <div class="scroll-line"></div>
+                <span class="scroll-text">SCROLL TO ENTER</span>
+            </div>
+        </section>
+
+        <!-- Act II: The Problem -->
+        <section class="act act-crisis">
+            <div class="act-header">
+                <span class="act-number">I</span>
+                <h2 class="act-title">THE CRISIS</h2>
             </div>
 
-            <!-- Manifesto -->
-            <div class="manifesto-text">
-                <p>Five autonomous agents.</p>
-                <p>Deployed on decentralized infrastructure.</p>
-                <p>Production intelligence for the next generation.</p>
+            <div class="crisis-statement">
+                <p class="crisis-line">$500 BILLION LOST ANNUALLY</p>
+                <p class="crisis-line">TO OVERPRODUCTION AND DEAD STOCK</p>
+                <p class="crisis-line crisis-emphasis">THE FASHION INDUSTRY'S SUPPLY CHAIN NEEDS TO BE FIXED</p>
             </div>
 
-            <!-- Enter Button -->
-            <a href="/studio" class="enter-experience">
-                <span class="enter-text">Enter The Studio</span>
-                <div class="enter-arrow">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path d="M6 16h20M16 6l10 10-10 10" stroke="currentColor" stroke-width="2"/>
-                    </svg>
+            <div class="stats-runway">
+                <div class="stat-piece">
+                    <div class="stat-value">30%</div>
+                    <div class="stat-label">AVERAGE DEAD STOCK</div>
                 </div>
-            </a>
+                <div class="stat-piece">
+                    <div class="stat-value">±40%</div>
+                    <div class="stat-label">COST ESTIMATION ERRORS</div>
+                </div>
+                <div class="stat-piece">
+                    <div class="stat-value">500+</div>
+                    <div class="stat-label">MINIMUM ORDER QUANTITIES</div>
+                </div>
+                <div class="stat-piece">
+                    <div class="stat-value">60%</div>
+                    <div class="stat-label">LATE DELIVERIES</div>
+                </div>
+            </div>
+        </section>
 
-            <!-- Metrics -->
-            <div class="key-metrics">
-                <div class="metric-item">
-                    <div class="metric-value">±2%</div>
-                    <div class="metric-label">Cost Accuracy</div>
+        <!-- Act III: The Solution -->
+        <section class="act act-solution">
+            <div class="act-header">
+                <span class="act-number">II</span>
+                <h2 class="act-title">THE SYSTEM</h2>
+            </div>
+
+            <div class="solution-statement">
+                <p class="solution-line">FIVE AUTONOMOUS AGENTS</p>
+                <p class="solution-line">DEPLOYED ON DECENTRALIZED INFRASTRUCTURE</p>
+                <p class="solution-line solution-emphasis">PRECISION INTELLIGENCE FOR EVERY DECISION</p>
+            </div>
+        </section>
+
+        <!-- Act IV: The Collection (Agents) -->
+        <section class="act act-collection">
+            <div class="act-header">
+                <span class="act-number">III</span>
+                <h2 class="act-title">THE AGENTS</h2>
+            </div>
+
+            <div class="collection-pieces">
+
+                <!-- Agent 1 -->
+                <div class="piece" data-piece="1">
+                    <div class="piece-number">01</div>
+                    <div class="piece-content">
+                        <h3 class="piece-name">MAYA CHEN</h3>
+                        <div class="piece-role">BOM & COSTING SPECIALIST</div>
+                        <div class="piece-description">
+                            <p>Former supply chain analyst at Alexander Wang. 12 years calculating fabric costs, labor rates, and logistics across Bangladesh, Vietnam, and Turkey. She knows every mill's pricing structure and can spot markup inflation instantly.</p>
+                            <p class="piece-metric">±2% cost accuracy in 30 seconds</p>
+                        </div>
+                    </div>
+                    <div class="piece-line"></div>
                 </div>
-                <div class="metric-divider"></div>
-                <div class="metric-item">
-                    <div class="metric-value">30-50%</div>
-                    <div class="metric-label">MOQ Reduction</div>
+
+                <!-- Agent 2 -->
+                <div class="piece" data-piece="2">
+                    <div class="piece-number">02</div>
+                    <div class="piece-content">
+                        <h3 class="piece-name">DAVID OKAFOR</h3>
+                        <div class="piece-role">MOQ Negotiation Strategist</div>
+                        <div class="piece-description">
+                            <p>Veteran buyer who spent 15 years negotiating with factories in Guangzhou and Tirupur. He's closed 500+ deals and knows exactly when a supplier will flex on minimums. Multi-style leverage. Timing plays. Payment term offsets.</p>
+                            <p class="piece-metric">30-50% MOQ reduction</p>
+                        </div>
+                    </div>
+                    <div class="piece-line"></div>
                 </div>
-                <div class="metric-divider"></div>
-                <div class="metric-item">
-                    <div class="metric-value">95%</div>
-                    <div class="metric-label">On-Time Delivery</div>
+
+                <!-- Agent 3 -->
+                <div class="piece" data-piece="3">
+                    <div class="piece-number">03</div>
+                    <div class="piece-content">
+                        <h3 class="piece-name">ELENA VOLKOV</h3>
+                        <div class="piece-role">Production Timeline Manager</div>
+                        <div class="piece-description">
+                            <p>Ex-production manager from Prada's Italian factories. She's mapped every stage from tech pack approval to final QC. Knows the exact buffer times needed for fabric dyeing, pattern grading, and customs clearance. No surprises.</p>
+                            <p class="piece-metric">95% on-time delivery accuracy</p>
+                        </div>
+                    </div>
+                    <div class="piece-line"></div>
                 </div>
-                <div class="metric-divider"></div>
-                <div class="metric-item">
-                    <div class="metric-value">&lt;10%</div>
-                    <div class="metric-label">Dead Stock</div>
+
+                <!-- Agent 4 -->
+                <div class="piece" data-piece="4">
+                    <div class="piece-number">04</div>
+                    <div class="piece-content">
+                        <h3 class="piece-name">PRIYA SHARMA</h3>
+                        <div class="piece-role">Inventory & Demand Forecaster</div>
+                        <div class="piece-description">
+                            <p>Data scientist from Zara's analytics team. Built predictive models on 10 million orders. She knows size curves by demographic, regional fit preferences, and exactly how many XS vs XL you need to produce to avoid dead stock.</p>
+                            <p class="piece-metric">Dead stock reduced to under 10%</p>
+                        </div>
+                    </div>
+                    <div class="piece-line"></div>
+                </div>
+
+                <!-- Agent 5 -->
+                <div class="piece" data-piece="5">
+                    <div class="piece-number">05</div>
+                    <div class="piece-content">
+                        <h3 class="piece-name">JAMES HARDING</h3>
+                        <div class="piece-role">Cash Flow Financial Planner</div>
+                        <div class="piece-description">
+                            <p>Former CFO at Everlane. He's sequenced payment schedules for 200+ production runs. Deposit timing. Freight coordination. Duty calculations. Burn rate modeling. He knows your cash position at every stage before you commit a dollar.</p>
+                            <p class="piece-metric">Complete financial visibility</p>
+                        </div>
+                    </div>
+                    <div class="piece-line"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Act V: The Finale -->
+        <section class="act act-finale">
+            <div class="finale-content">
+                <div class="finale-statement">
+                    <p>FROM CONCEPT TO PRODUCTION</p>
+                    <p>WITH ABSOLUTE PRECISION</p>
+                </div>
+
+                <a href="index.html" class="runway-cta">
+                    <span class="cta-text">ENTER THE STUDIO</span>
+                    <span class="cta-arrow">→</span>
+                </a>
+
+                <div class="finale-metrics">
+                    <span class="finale-metric">±2% COST ACCURACY</span>
+                    <span class="metric-separator">—</span>
+                    <span class="finale-metric">30-50% MOQ REDUCTION</span>
+                    <span class="metric-separator">—</span>
+                    <span class="finale-metric">95% ON-TIME DELIVERY</span>
+                    <span class="metric-separator">—</span>
+                    <span class="finale-metric">&lt;10% DEAD STOCK</span>
                 </div>
             </div>
 
-        </div>
+            <!-- Tech Credits -->
+            <div class="tech-credits">
+                <div class="credit-line">ASI ALLIANCE TECHNOLOGY</div>
+                <div class="credit-line">FETCH.AI UAGENTS · SINGULARITYNET METTA · AGENTVERSE MAINNET</div>
+            </div>
+        </section>
 
-        <!-- Tech Stack Footer -->
-        <div class="tech-footer">
-            <div class="tech-item">Fetch.ai uAgents</div>
-            <div class="tech-divider">·</div>
-            <div class="tech-item">SingularityNET MeTTa</div>
-            <div class="tech-divider">·</div>
-            <div class="tech-item">Agentverse Mainnet</div>
-        </div>
     </main>
 
-    <!-- Grain Texture Overlay -->
-    <div class="grain-overlay"></div>
+    <!-- Vignette -->
+    <div class="vignette"></div>
 
+    <script src="landing.js"></script>
 </body>
 </html>

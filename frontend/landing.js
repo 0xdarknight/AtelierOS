@@ -1,62 +1,26 @@
-const canvas = document.getElementById('fabric-canvas');
-const ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+// ATELIER OS - Runway Landing Experience
 
-class FabricThread {
-    constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.length = Math.random() * 150 + 60;
-        this.angle = Math.random() * Math.PI * 2;
-        this.opacity = Math.random() * 0.06 + 0.01;
-        this.speed = Math.random() * 0.15 + 0.03;
-        this.color = `rgba(155, 143, 130, ${this.opacity})`;
-    }
+// Intersection Observer for scroll-triggered animations
+const observerOptions = {
+    threshold: 0.2,
+    rootMargin: '0px 0px -100px 0px'
+};
 
-    update() {
-        this.y += this.speed;
-        if (this.y > canvas.height + this.length) {
-            this.y = -this.length;
-            this.x = Math.random() * canvas.width;
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
         }
-    }
-
-    draw() {
-        ctx.beginPath();
-        ctx.moveTo(this.x, this.y);
-        ctx.lineTo(
-            this.x + Math.cos(this.angle) * this.length,
-            this.y + Math.sin(this.angle) * this.length
-        );
-        ctx.strokeStyle = this.color;
-        ctx.lineWidth = 1;
-        ctx.stroke();
-    }
-}
-
-const threads = [];
-for (let i = 0; i < 250; i++) {
-    threads.push(new FabricThread());
-}
-
-function animateFabric() {
-    ctx.fillStyle = 'rgba(248, 246, 241, 0.02)';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    threads.forEach(thread => {
-        thread.update();
-        thread.draw();
     });
-    requestAnimationFrame(animateFabric);
-}
+}, observerOptions);
 
-animateFabric();
-
-window.addEventListener('resize', () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+// Observe all pieces (agents)
+document.querySelectorAll('.piece').forEach((piece, index) => {
+    piece.style.transitionDelay = `${index * 0.15}s`;
+    observer.observe(piece);
 });
 
+// Smooth scroll behavior
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -70,32 +34,35 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Parallax effect on scroll
+let ticking = false;
+
+function updateParallax() {
+    const scrolled = window.pageYOffset;
+
+    // Move spotlight scanner
+    const spotlight = document.querySelector('.spotlight-scanner');
+    if (spotlight) {
+        spotlight.style.transform = `translateY(${scrolled * 0.3}px)`;
+    }
+
+    // Subtle parallax on grid
+    const grid = document.querySelector('.fashion-grid');
+    if (grid) {
+        grid.style.transform = `translateY(${scrolled * 0.1}px)`;
+    }
+
+    ticking = false;
+}
+
 window.addEventListener('scroll', () => {
-    const nav = document.querySelector('.nav');
-    if (window.scrollY > 50) {
-        nav.style.background = 'rgba(248, 246, 241, 0.98)';
-    } else {
-        nav.style.background = 'rgba(248, 246, 241, 0.95)';
+    if (!ticking) {
+        window.requestAnimationFrame(updateParallax);
+        ticking = true;
     }
 });
 
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
-
-document.querySelectorAll('.agent-showcase, .capability, .tech-item').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'all 0.6s ease';
-    observer.observe(el);
+// Add entrance animation class to body
+window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
 });

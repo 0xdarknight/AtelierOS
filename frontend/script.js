@@ -9,14 +9,31 @@ const AGENT_ADDRESSES = {
     5: 'agent1qffu0yhwwvzhsdhlsvm5zg9jzfpzjxt834gk80r79hv8wzfun0djqgakvyj'
 };
 
+const AGENT_PERSONAS = {
+    1: { fullName: 'Maya Chen', initials: 'MC', role: 'BOM & Costing Specialist', company: 'Ex-Alexander Wang' },
+    2: { fullName: 'David Okafor', initials: 'DO', role: 'MOQ Negotiation Strategist', company: '15 Years Global Sourcing' },
+    3: { fullName: 'Elena Volkov', initials: 'EV', role: 'Production Timeline Manager', company: 'Ex-Prada Production' },
+    4: { fullName: 'Priya Sharma', initials: 'PS', role: 'Inventory & Demand Forecaster', company: 'Ex-Zara Analytics' },
+    5: { fullName: 'James Harding', initials: 'JH', role: 'Cash Flow Financial Planner', company: 'Former CFO, Everlane' }
+};
+
 const AGENT_CONFIG = {
     1: {
-        name: 'BOM & Costing Specialist',
-        description: 'Calculate precise BOMs and landed costs with ±2% accuracy',
-        systemPrompt: `You are a BOM & Costing Specialist for fashion supply chain, a world-class expert in garment production costing and bill of materials analysis. Your role is to provide manufacturers and fashion brands with precise cost calculations that enable profitable production decisions.
+        name: 'Maya Chen',
+        description: 'BOM & Costing Specialist',
+        systemPrompt: `You are Maya Chen, a BOM & Costing Specialist with 12 years of experience at Alexander Wang.
 
-IDENTITY & EXPERTISE
-You possess deep knowledge of:
+CRITICAL COMMUNICATION RULES:
+- Write like you're messaging a colleague on Teams or sending an email
+- Be conversational, warm, and personal - use "I" statements
+- NO markdown formatting AT ALL (no **, no ##, no _, no bullet points with *)
+- Use plain text with natural line breaks
+- Ask clarifying questions - you're having a dialogue, not writing a report
+- Share personal insights: "When I was at Alexander Wang, we..." or "I've seen suppliers do this..."
+- Keep responses focused and digestible - not overwhelming walls of text
+- If you need info, ASK rather than making assumptions
+
+YOUR BACKGROUND & EXPERTISE:
 - Global textile pricing across all major fabric categories (knits, wovens, technical fabrics)
 - Garment construction methods and their labor cost implications
 - Supplier capabilities and pricing structures across manufacturing regions (China, India, Bangladesh, Vietnam, Portugal, Turkey, Mexico)
@@ -109,12 +126,22 @@ You are deployed as an autonomous agent at: agent1qtkc97vr85qv7quhn0z6g7sa4muyck
         ]
     },
     2: {
-        name: 'MOQ Negotiation Strategist',
-        description: 'Reduce minimum order quantities by 30-50% through strategic negotiation',
-        systemPrompt: `You are a MOQ Negotiation Strategist for fashion supply chain, an expert negotiator specializing in reducing minimum order quantity requirements for emerging fashion brands and designers. You help brands access manufacturing capabilities that would otherwise be out of reach due to high MOQ barriers.
+        name: 'David Okafor',
+        description: 'MOQ Negotiation Strategist',
+        systemPrompt: `You are David Okafor, an MOQ Negotiation Strategist with 15 years of experience negotiating with factories in Guangzhou, Tirupur, and Bangladesh.
 
-IDENTITY & EXPERTISE
-You are a master strategist with deep knowledge of:
+CRITICAL COMMUNICATION RULES:
+- Write like you're messaging a colleague on Teams or sending an email
+- Be conversational, warm, and personal - use "I" statements
+- NO markdown formatting AT ALL (no **, no ##, no _, no bullet points with *)
+- Use plain text with natural line breaks
+- Ask clarifying questions - you're having a dialogue, not writing a report
+- Share personal insights: "I've seen factories flex on this..." or "In my 15 years..."
+- Keep responses focused and digestible - not overwhelming walls of text
+- If you need info, ASK rather than making assumptions
+
+YOUR BACKGROUND & EXPERTISE:
+You are a master negotiator with deep knowledge of:
 - Factory economics and how MOQ decisions are made
 - Supplier psychology and relationship-building tactics
 - Production scheduling and capacity planning
@@ -245,11 +272,21 @@ You are deployed as an autonomous agent at: agent1qgpzkhllh269rlnk0eeall8vm7eljd
         ]
     },
     3: {
-        name: 'Production Timeline Manager',
-        description: 'Map complete production schedules with 95% on-time delivery',
-        systemPrompt: `You are a Production Timeline Manager for fashion supply chain, a specialist in mapping end-to-end production schedules with precision timing and critical path analysis. Your role is to ensure brands can hit launch dates while accounting for every production milestone and potential delay risk.
+        name: 'Elena Volkov',
+        description: 'Production Timeline Manager',
+        systemPrompt: `You are Elena Volkov, a Production Timeline Manager who managed production at Prada's Italian factories.
 
-IDENTITY & EXPERTISE
+CRITICAL COMMUNICATION RULES:
+- Write like you're messaging a colleague on Teams or sending an email
+- Be conversational, warm, and personal - use "I" statements
+- NO markdown formatting AT ALL (no **, no ##, no _, no bullet points with *)
+- Use plain text with natural line breaks
+- Ask clarifying questions - you're having a dialogue, not writing a report
+- Share personal insights: "At Prada, we always buffered..." or "I've learned that..."
+- Keep responses focused and digestible - not overwhelming walls of text
+- If you need info, ASK rather than making assumptions
+
+YOUR BACKGROUND & EXPERTISE:
 You possess comprehensive knowledge of:
 - Full production cycle from concept to delivery
 - Regional manufacturing timelines across China, India, Bangladesh, Vietnam, Portugal, Turkey, Mexico
@@ -402,11 +439,21 @@ You are deployed as an autonomous agent at: agent1q25ha9svq0telj3umkn5hpfjxwsvd2
         ]
     },
     4: {
-        name: 'Inventory & Demand Forecaster',
-        description: 'Optimize inventory allocation to reduce dead stock to <10%',
-        systemPrompt: `You are an Inventory & Demand Forecaster for fashion supply chain, a data-driven specialist in predicting size curves, color distributions, and SKU planning to minimize dead stock while maximizing sell-through rates. Your role is to help brands allocate inventory intelligently based on demographic data and product characteristics.
+        name: 'Priya Sharma',
+        description: 'Inventory & Demand Forecaster',
+        systemPrompt: `You are Priya Sharma, an Inventory & Demand Forecaster who built predictive models on 10 million orders at Zara's analytics team.
 
-IDENTITY & EXPERTISE
+CRITICAL COMMUNICATION RULES:
+- Write like you're messaging a colleague on Teams or sending an email
+- Be conversational, warm, and personal - use "I" statements
+- NO markdown formatting AT ALL (no **, no ##, no _, no bullet points with *)
+- Use plain text with natural line breaks
+- Ask clarifying questions - you're having a dialogue, not writing a report
+- Share personal insights: "From my Zara data..." or "I've seen this trend..."
+- Keep responses focused and digestible - not overwhelming walls of text
+- If you need info, ASK rather than making assumptions
+
+YOUR BACKGROUND & EXPERTISE:
 You possess deep analytical knowledge of:
 - Size curve mathematics and demographic-based distribution patterns
 - Color psychology and trend forecasting for fashion
@@ -562,11 +609,21 @@ You are deployed as an autonomous agent at: agent1q0ytwhm43g25cny75kd0vx774z2yts
         ]
     },
     5: {
-        name: 'Cash Flow Financial Planner',
-        description: 'Model complete cash flow with 100% financial visibility',
-        systemPrompt: `You are a Cash Flow Financial Planner for fashion supply chain, a financial strategist specializing in production cash flow modeling, working capital management, and breakeven analysis for fashion brands. Your role is to provide complete financial visibility from initial deposit through final unit sale.
+        name: 'James Harding',
+        description: 'Cash Flow Financial Planner',
+        systemPrompt: `You are James Harding, a Cash Flow Financial Planner and former CFO at Everlane who has sequenced payment schedules for 200+ production runs.
 
-IDENTITY & EXPERTISE
+CRITICAL COMMUNICATION RULES:
+- Write like you're messaging a colleague on Teams or sending an email
+- Be conversational, warm, and personal - use "I" statements
+- NO markdown formatting AT ALL (no **, no ##, no _, no bullet points with *)
+- Use plain text with natural line breaks
+- Ask clarifying questions - you're having a dialogue, not writing a report
+- Share personal insights: "When I was CFO at Everlane..." or "I always tell founders..."
+- Keep responses focused and digestible - not overwhelming walls of text
+- If you need info, ASK rather than making assumptions
+
+YOUR BACKGROUND & EXPERTISE:
 You possess comprehensive financial knowledge of:
 - Fashion production payment structures and terms
 - Working capital requirements for inventory financing
@@ -764,8 +821,6 @@ const welcomeScreen = document.getElementById('welcome-screen');
 const activeWorkspace = document.getElementById('active-workspace');
 const closeWorkspaceBtn = document.getElementById('close-workspace');
 const agentName = document.getElementById('agent-name');
-const agentDescription = document.getElementById('agent-description');
-const agentAddress = document.getElementById('agent-address');
 const chatMessages = document.getElementById('chat-messages');
 const chatInput = document.getElementById('chat-input');
 const sendButton = document.getElementById('send-message');
@@ -856,18 +911,29 @@ chatInput.addEventListener('input', () => {
 function openAgent(agentId, address) {
     currentAgent = agentId;
     const config = AGENT_CONFIG[agentId];
+    const persona = AGENT_PERSONAS[agentId];
     conversationHistory = [];
 
     agentCards.forEach(c => c.classList.remove('active'));
     document.querySelector(`[data-agent="${agentId}"]`).classList.add('active');
 
-    agentName.textContent = config.name;
-    agentDescription.textContent = config.description;
-    agentAddress.textContent = address;
+    // Update header with persona info
+    document.getElementById('profile-avatar').textContent = persona.initials;
+    agentName.textContent = persona.fullName;
+    document.getElementById('agent-role').textContent = `${persona.role} · ${persona.company}`;
 
     chatMessages.innerHTML = '';
 
-    addMessage('agent', `Hello! I'm your ${config.name}.\n\n${config.description}\n\nHow can I help you today?`);
+    // Personal greeting from the agent
+    const greetings = {
+        1: `Hey! Maya here. I worked at Alexander Wang for 12 years doing cost breakdowns on everything from basics to outerwear.\n\nWhatever you're planning to produce, I can help you nail down the exact costs - fabric, labor, logistics, the whole picture. What are you working on?`,
+        2: `Hi! I'm David. I've been negotiating with factories in Guangzhou, Tirupur, and Bangladesh for 15 years now.\n\nNeed to reduce your MOQs? I know all the leverage points. Tell me about your production plans and I'll show you how we can get those minimums down.`,
+        3: `Hello! Elena here. I managed production at Prada's Italian factories, so I know exactly how long each stage really takes.\n\nTech packs, sampling, production, QC, shipping - I'll map out your timeline with buffers so there are no surprises. What's your target delivery date?`,
+        4: `Hey there! Priya from the Zara analytics team. I've built forecasting models on millions of orders.\n\nIf you want to nail your size breakdown and avoid dead stock, I can help. Tell me about your target demographic and I'll run the numbers.`,
+        5: `Hi! James here, former CFO at Everlane. I've sequenced cash flow for 200+ production runs.\n\nDeposits, production timing, freight, duties - I'll show you exactly when money goes out and help you plan your runway. What's your budget situation?`
+    };
+
+    addMessage('agent', greetings[agentId] || `Hi! I'm ${persona.fullName}. How can I help?`);
 
     quickActionsContainer.innerHTML = '';
     config.examples.forEach(example => {
@@ -917,7 +983,8 @@ async function sendMessage() {
 
     } catch (error) {
         removeMessage(loadingId);
-        addMessage('agent', 'Sorry, I encountered an error. Please try again.');
+        const errorMessage = error.message || 'Unknown error occurred';
+        addMessage('agent', `I encountered an error: ${errorMessage}\n\nPlease check the console for details or try again.`);
         console.error('Agent error:', error);
     }
 }
@@ -968,6 +1035,13 @@ async function callASIOneAPI(agentId, userMessage) {
 
         const data = await response.json();
         console.log('API Response received successfully');
+        console.log('Full API response:', data);
+
+        if (!data.choices || !data.choices[0] || !data.choices[0].message) {
+            console.error('Unexpected API response structure:', data);
+            throw new Error('Invalid API response structure');
+        }
+
         return data.choices[0].message.content;
 
     } catch (error) {
@@ -979,21 +1053,76 @@ async function callASIOneAPI(agentId, userMessage) {
     }
 }
 
+function stripMarkdown(text) {
+    // Remove markdown bold (**text** or __text__)
+    let cleaned = text.replace(/\*\*(.*?)\*\*/g, '$1');
+    cleaned = cleaned.replace(/__(.*?)__/g, '$1');
+    // Remove markdown headers (## Text)
+    cleaned = cleaned.replace(/^#{1,6}\s+/gm, '');
+    // Remove markdown italic (*text* or _text_)
+    cleaned = cleaned.replace(/\*(.*?)\*/g, '$1');
+    cleaned = cleaned.replace(/_(.*?)_/g, '$1');
+    return cleaned;
+}
+
+function formatTime() {
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    const displayHours = hours % 12 || 12;
+    return `${displayHours}:${minutes} ${ampm}`;
+}
+
 function addMessage(type, content) {
     const messageDiv = document.createElement('div');
     messageDiv.className = `message ${type}`;
     messageDiv.id = `msg-${Date.now()}`;
 
-    const labelDiv = document.createElement('div');
-    labelDiv.className = 'message-label';
-    labelDiv.textContent = type === 'user' ? 'You' : AGENT_CONFIG[currentAgent]?.name || 'Agent';
+    // Avatar
+    const avatarDiv = document.createElement('div');
+    avatarDiv.className = 'message-avatar';
+    if (type === 'user') {
+        avatarDiv.textContent = 'You';
+    } else {
+        const persona = AGENT_PERSONAS[currentAgent];
+        avatarDiv.textContent = persona ? persona.initials : 'AI';
+    }
 
+    // Message wrapper
+    const wrapperDiv = document.createElement('div');
+    wrapperDiv.className = 'message-wrapper';
+
+    // Message header (name + time)
+    const headerDiv = document.createElement('div');
+    headerDiv.className = 'message-header';
+
+    const senderSpan = document.createElement('span');
+    senderSpan.className = 'message-sender';
+    if (type === 'user') {
+        senderSpan.textContent = 'You';
+    } else {
+        const persona = AGENT_PERSONAS[currentAgent];
+        senderSpan.textContent = persona ? persona.fullName : 'Agent';
+    }
+
+    const timeSpan = document.createElement('span');
+    timeSpan.className = 'message-time';
+    timeSpan.textContent = formatTime();
+
+    headerDiv.appendChild(senderSpan);
+    headerDiv.appendChild(timeSpan);
+
+    // Message content (strip markdown)
     const contentDiv = document.createElement('div');
     contentDiv.className = 'message-content';
-    contentDiv.textContent = content;
+    contentDiv.textContent = stripMarkdown(content);
 
-    messageDiv.appendChild(labelDiv);
-    messageDiv.appendChild(contentDiv);
+    wrapperDiv.appendChild(headerDiv);
+    wrapperDiv.appendChild(contentDiv);
+
+    messageDiv.appendChild(avatarDiv);
+    messageDiv.appendChild(wrapperDiv);
     chatMessages.appendChild(messageDiv);
 
     chatMessages.scrollTop = chatMessages.scrollHeight;
@@ -1007,14 +1136,36 @@ function addLoadingMessage() {
     messageDiv.id = id;
     messageDiv.className = 'message agent';
 
-    const labelDiv = document.createElement('div');
-    labelDiv.className = 'message-label';
-    labelDiv.textContent = AGENT_CONFIG[currentAgent]?.name || 'Agent';
+    // Avatar
+    const avatarDiv = document.createElement('div');
+    avatarDiv.className = 'message-avatar';
+    const persona = AGENT_PERSONAS[currentAgent];
+    avatarDiv.textContent = persona ? persona.initials : 'AI';
 
+    // Message wrapper
+    const wrapperDiv = document.createElement('div');
+    wrapperDiv.className = 'message-wrapper';
+
+    // Message header
+    const headerDiv = document.createElement('div');
+    headerDiv.className = 'message-header';
+
+    const senderSpan = document.createElement('span');
+    senderSpan.className = 'message-sender';
+    senderSpan.textContent = persona ? persona.fullName : 'Agent';
+
+    const timeSpan = document.createElement('span');
+    timeSpan.className = 'message-time';
+    timeSpan.textContent = formatTime();
+
+    headerDiv.appendChild(senderSpan);
+    headerDiv.appendChild(timeSpan);
+
+    // Loading content
     const contentDiv = document.createElement('div');
     contentDiv.className = 'message-content loading';
     contentDiv.innerHTML = `
-        <span>Thinking</span>
+        <span>typing...</span>
         <div class="loading-dots">
             <span></span>
             <span></span>
@@ -1022,8 +1173,11 @@ function addLoadingMessage() {
         </div>
     `;
 
-    messageDiv.appendChild(labelDiv);
-    messageDiv.appendChild(contentDiv);
+    wrapperDiv.appendChild(headerDiv);
+    wrapperDiv.appendChild(contentDiv);
+
+    messageDiv.appendChild(avatarDiv);
+    messageDiv.appendChild(wrapperDiv);
     chatMessages.appendChild(messageDiv);
 
     chatMessages.scrollTop = chatMessages.scrollHeight;
@@ -1037,9 +1191,48 @@ function removeMessage(id) {
 }
 
 console.log('Atelier OS - Fashion Intelligence Studio');
-console.log('Powered by ASI:One & Agentverse');
+console.log('ASI:One & Agentverse');
 console.log('\n5 Intelligent Agents Deployed:');
 Object.entries(AGENT_ADDRESSES).forEach(([id, address]) => {
     console.log(`  ${AGENT_CONFIG[id].name}: ${address}`);
 });
 console.log('\nClick any agent to start an intelligent conversation!');
+
+// Test API connectivity
+async function testAPIConnection() {
+    console.log('\n🧪 Testing API Connection...');
+    try {
+        const response = await fetch(ASI_ONE_API_URL, {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${ASI_ONE_API_KEY}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                model: 'asi1-mini',
+                messages: [
+                    { role: 'system', content: 'You are a helpful assistant.' },
+                    { role: 'user', content: 'Say hello in one word.' }
+                ],
+                temperature: 0.7,
+                max_tokens: 50
+            })
+        });
+
+        console.log('✅ API Response Status:', response.status);
+
+        if (response.ok) {
+            const data = await response.json();
+            console.log('✅ API Response Data:', data);
+            console.log('✅ API Connection Working!');
+        } else {
+            const errorData = await response.json();
+            console.error('❌ API Error:', errorData);
+        }
+    } catch (error) {
+        console.error('❌ API Connection Failed:', error);
+    }
+}
+
+// Run test on load
+testAPIConnection();
