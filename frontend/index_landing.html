@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATELIER OS</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.css">
+</head>
+<body>
+    <canvas id="fabric-canvas"></canvas>
+
+    <div data-scroll-container>
+        <section class="scene intro-scene" data-scroll-section>
+            <div class="scene-content">
+                <h1 class="title-main" data-scroll data-scroll-speed="2">ATELIER OS</h1>
+                <p class="subtitle-main" data-scroll data-scroll-speed="1">Autonomous fashion supply chain intelligence</p>
+                <div class="scroll-indicator" data-scroll data-scroll-speed="3">
+                    <span>SCROLL TO EXPLORE</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="scene crisis-scene" data-scroll-section>
+            <div class="scene-content">
+                <div class="stat-row" data-scroll data-scroll-speed="2">
+                    <div class="stat-block">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">Fashion startups fail</span>
+                    </div>
+                    <div class="stat-block">
+                        <span class="stat-number">$300B</span>
+                        <span class="stat-label">Market opportunity</span>
+                    </div>
+                </div>
+                <div class="problem-grid" data-scroll data-scroll-speed="1">
+                    <div class="problem-card">
+                        <h3>15-20% cost overruns</h3>
+                        <p>Designers can't calculate accurate BOMs</p>
+                    </div>
+                    <div class="problem-card">
+                        <h3>$50K+ MOQ barriers</h3>
+                        <p>Factories demand minimum orders beyond reach</p>
+                    </div>
+                    <div class="problem-card">
+                        <h3>30% dead stock</h3>
+                        <p>No demand forecasting leads to waste</p>
+                    </div>
+                    <div class="problem-card">
+                        <h3>6-9 month cash gap</h3>
+                        <p>Payment schedules destroy cashflow</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="scene agent-scene" data-scroll-section id="agent-1">
+            <div class="agent-layout">
+                <div class="agent-visual" data-scroll data-scroll-speed="2">
+                    <div class="fabric-swatch"></div>
+                    <div class="agent-label">01</div>
+                </div>
+                <div class="agent-content" data-scroll data-scroll-speed="1">
+                    <h2>BOM & Costing Specialist</h2>
+                    <div class="metrics-row">
+                        <div class="metric">
+                            <span class="metric-value">±2%</span>
+                            <span class="metric-label">Accuracy</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">87%</span>
+                            <span class="metric-label">Improvement</span>
+                        </div>
+                    </div>
+                    <p class="agent-description">
+                        Calculates fabric consumption, trim costing, SMV labor rates, and full landed cost models.
+                        Eliminates 15-20% cost overruns through precise bill of materials analysis.
+                    </p>
+                    <button class="agent-connect" data-agent="1">CONNECT TO AGENT</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="scene agent-scene" data-scroll-section id="agent-2">
+            <div class="agent-layout reverse">
+                <div class="agent-visual" data-scroll data-scroll-speed="2">
+                    <div class="fabric-swatch"></div>
+                    <div class="agent-label">02</div>
+                </div>
+                <div class="agent-content" data-scroll data-scroll-speed="1">
+                    <h2>MOQ Negotiation Strategist</h2>
+                    <div class="metrics-row">
+                        <div class="metric">
+                            <span class="metric-value">30-50%</span>
+                            <span class="metric-label">Reduction</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">70%</span>
+                            <span class="metric-label">Success rate</span>
+                        </div>
+                    </div>
+                    <p class="agent-description">
+                        Stacks negotiation strategies including multi-style commitments, off-peak timing,
+                        and prepayment leverage to reduce minimum order quantities by 30-50%.
+                    </p>
+                    <button class="agent-connect" data-agent="2">CONNECT TO AGENT</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="scene agent-scene" data-scroll-section id="agent-3">
+            <div class="agent-layout">
+                <div class="agent-visual" data-scroll data-scroll-speed="2">
+                    <div class="fabric-swatch"></div>
+                    <div class="agent-label">03</div>
+                </div>
+                <div class="agent-content" data-scroll data-scroll-speed="1">
+                    <h2>Production Timeline Manager</h2>
+                    <div class="metrics-row">
+                        <div class="metric">
+                            <span class="metric-value">95%</span>
+                            <span class="metric-label">Accuracy</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">7</span>
+                            <span class="metric-label">Quality gates</span>
+                        </div>
+                    </div>
+                    <p class="agent-description">
+                        Maps complete production timeline from tech pack to delivery with quality checkpoints,
+                        risk assessment, and AQL 2.5 standards compliance.
+                    </p>
+                    <button class="agent-connect" data-agent="3">CONNECT TO AGENT</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="scene agent-scene" data-scroll-section id="agent-4">
+            <div class="agent-layout reverse">
+                <div class="agent-visual" data-scroll data-scroll-speed="2">
+                    <div class="fabric-swatch"></div>
+                    <div class="agent-label">04</div>
+                </div>
+                <div class="agent-content" data-scroll data-scroll-speed="1">
+                    <h2>Inventory & Demand Forecaster</h2>
+                    <div class="metrics-row">
+                        <div class="metric">
+                            <span class="metric-value">&lt;10%</span>
+                            <span class="metric-label">Dead stock</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">67%</span>
+                            <span class="metric-label">Reduction</span>
+                        </div>
+                    </div>
+                    <p class="agent-description">
+                        Predicts optimal size curves, color distribution, and SKU matrices with reorder triggers
+                        to reduce dead stock from 30% to under 10%.
+                    </p>
+                    <button class="agent-connect" data-agent="4">CONNECT TO AGENT</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="scene agent-scene" data-scroll-section id="agent-5">
+            <div class="agent-layout">
+                <div class="agent-visual" data-scroll data-scroll-speed="2">
+                    <div class="fabric-swatch"></div>
+                    <div class="agent-label">05</div>
+                </div>
+                <div class="agent-content" data-scroll data-scroll-speed="1">
+                    <h2>Cash Flow Financial Planner</h2>
+                    <div class="metrics-row">
+                        <div class="metric">
+                            <span class="metric-value">100%</span>
+                            <span class="metric-label">Visibility</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">Exact</span>
+                            <span class="metric-label">Precision</span>
+                        </div>
+                    </div>
+                    <p class="agent-description">
+                        Models complete payment schedules, cash position tracking, breakeven analysis,
+                        and reveals true capital requirements for production runs.
+                    </p>
+                    <button class="agent-connect" data-agent="5">CONNECT TO AGENT</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="scene tech-scene" data-scroll-section>
+            <div class="scene-content">
+                <h2 class="section-title" data-scroll data-scroll-speed="2">Powered by ASI Alliance</h2>
+                <div class="tech-stack" data-scroll data-scroll-speed="1">
+                    <div class="tech-item">
+                        <span class="tech-name">Fetch.ai uAgents</span>
+                        <p>Autonomous agent framework</p>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-name">SingularityNET MeTTa</span>
+                        <p>Knowledge graph reasoning</p>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-name">ASI:ONE Protocol</span>
+                        <p>Decentralized intelligence</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="terminal-overlay" class="terminal-overlay">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <span class="terminal-title" id="terminal-agent-name">AGENT</span>
+                <button class="terminal-close">×</button>
+            </div>
+            <div class="terminal-body">
+                <div class="terminal-input-area">
+                    <span class="prompt">></span>
+                    <input type="text" class="terminal-input" placeholder="Enter your query..." />
+                </div>
+                <div class="terminal-output"></div>
+                <div class="terminal-stats">
+                    <span>Processing time: <span class="metric-time">0ms</span></span>
+                    <span>Data points: <span class="metric-data">0</span></span>
+                    <span>Confidence: <span class="metric-conf">0%</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

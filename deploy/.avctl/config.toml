@@ -1,0 +1,26 @@
+[workspace]
+
+[[agent]]
+  name = "Agent1"
+  path = "agent1"
+  address = "agent1qtkc97vr85qv7quhn0z6g7sa4muyckmchkf504r6wv6mdpqre8g3gjmykj3"
+
+[[agent]]
+  name = "Agent2"
+  path = "agent2"
+  address = "agent1qgpzkhllh269rlnk0eeall8vm7eljd790pfcytyjezrfgkz6p89f2wv385w"
+
+[[agent]]
+  name = "Agent3"
+  path = "agent3"
+  address = "agent1q25ha9svq0telj3umkn5hpfjxwsvd2wqa9zj4ac2m8g6mfle33a750c04pa"
+
+[[agent]]
+  name = "Agent4"
+  path = "agent4"
+  address = "agent1q0ytwhm43g25cny75kd0vx774z2ytswu2rs6ru6vddthg9gh2f2fkm3yu5w"
+
+[[agent]]
+  name = "Agent5"
+  path = "agent5"
+  address = "agent1qffu0yhwwvzhsdhlsvm5zg9jzfpzjxt834gk80r79hv8wzfun0djqgakvyj"

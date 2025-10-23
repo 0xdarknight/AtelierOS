@@ -1,0 +1,9 @@
+[project]
+name = "moq-negotiation-strategist"
+version = "1.0.0"
+description = "MOQ Negotiation Strategist for fashion supply chain"
+
+dependencies = [
+    "uagents>=0.12.0",
+    "uagents-core>=0.2.0"
+]

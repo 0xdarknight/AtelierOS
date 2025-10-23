@@ -1,0 +1,9 @@
+[project]
+name = "bom-costing-specialist"
+version = "1.0.0"
+description = "BOM & Costing Specialist for fashion supply chain"
+
+dependencies = [
+    "uagents>=0.12.0",
+    "uagents-core>=0.2.0"
+]
