@@ -1,0 +1,10 @@
+{
+  "buildCommand": "echo 'No build needed'",
+  "outputDirectory": "frontend",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/", "destination": "/landing.html" },
+    { "source": "/studio", "destination": "/index.html" }
+  ]
+}
