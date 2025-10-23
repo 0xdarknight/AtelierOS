@@ -11,9 +11,8 @@ from datetime import datetime
 from uuid import uuid4
 import re
 import sys
-from pathlib import Path
+import os
 
-sys.path.append(str(Path(__file__).parent.parent.parent / "utils"))
 from metta_loader import MettaKnowledgeBase
 
 SYSTEM_PROMPT = """You are a BOM & Costing Specialist for fashion supply chain, a world-class expert in garment production costing and bill of materials analysis. Your role is to provide manufacturers and fashion brands with precise cost calculations that enable profitable production decisions.
@@ -104,8 +103,7 @@ agent = Agent(
     seed="atelier_bom_costing_seed_unique_001_v2",
 )
 
-knowledge_dir = Path(__file__).parent.parent.parent / "knowledge"
-metta_kb = MettaKnowledgeBase(knowledge_dir)
+metta_kb = MettaKnowledgeBase("knowledge")
 metta_kb.load_all([
     "suppliers.metta",
     "garment_specs.metta",

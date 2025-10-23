@@ -11,9 +11,7 @@ from datetime import datetime, timedelta
 from uuid import uuid4
 import re
 import sys
-from pathlib import Path
 
-sys.path.append(str(Path(__file__).parent.parent.parent / "utils"))
 from metta_loader import MettaKnowledgeBase
 
 agent = Agent(
@@ -21,8 +19,7 @@ agent = Agent(
     seed="atelier_production_timeline_seed_unique_003_v2",
 )
 
-knowledge_dir = Path(__file__).parent.parent.parent / "knowledge"
-metta_kb = MettaKnowledgeBase(knowledge_dir)
+metta_kb = MettaKnowledgeBase("knowledge")
 metta_kb.load_all([
     "production_workflow.metta",
     "suppliers.metta",
