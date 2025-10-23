@@ -3,334 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ATELIER OS — Intelligence for Fashion</title>
+    <title>ATELIER OS</title>
     <link rel="stylesheet" href="landing-styles.css">
 </head>
-<body>
-    <div class="grain-overlay"></div>
-    <canvas id="fabric-canvas"></canvas>
+<body class="landing-only">
 
-    <nav class="nav">
-        <div class="nav-brand">
-            <span class="brand-icon">◆</span>
-            ATELIER OS
-        </div>
-        <div class="nav-links">
-            <a href="#manifesto">Manifesto</a>
-            <a href="#intelligence">Intelligence</a>
-            <a href="#craft">Craft</a>
-            <a href="/studio" class="nav-cta">Enter Studio →</a>
-        </div>
-    </nav>
+    <!-- Runway Lights Animation -->
+    <div class="runway-lights">
+        <div class="light" style="--delay: 0s"></div>
+        <div class="light" style="--delay: 0.1s"></div>
+        <div class="light" style="--delay: 0.2s"></div>
+        <div class="light" style="--delay: 0.3s"></div>
+        <div class="light" style="--delay: 0.4s"></div>
+    </div>
 
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <div class="hero-eyebrow">
-                <span class="shimmer">AI-Powered Fashion Infrastructure</span>
+    <!-- Main Landing -->
+    <main class="landing-main">
+        <div class="landing-content">
+
+            <!-- Brand Lockup -->
+            <div class="brand-lockup">
+                <div class="brand-diamond">◆</div>
+                <h1 class="brand-title">ATELIER OS</h1>
+                <div class="brand-subtitle">Intelligence Infrastructure for Fashion</div>
             </div>
-            <h1 class="hero-title">
-                Production Intelligence<br/>
-                <span class="title-accent">for the Next Generation</span>
-            </h1>
-            <p class="hero-manifesto">
-                Five autonomous agents. One mission: democratize manufacturing for emerging brands.<br/>
-                Navigate costing, negotiate MOQs, forecast demand—with the precision of established houses.
-            </p>
-            <div class="hero-actions">
-                <a href="/studio" class="btn-hero">
-                    <span>Launch Studio</span>
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <path d="M1 8h14M8 1l7 7-7 7" stroke="currentColor" stroke-width="1.5"/>
+
+            <!-- Season Label -->
+            <div class="season-badge">
+                <span class="season-text">ASI Alliance Collection</span>
+                <span class="season-divider">·</span>
+                <span class="season-year">2025</span>
+            </div>
+
+            <!-- Manifesto -->
+            <div class="manifesto-text">
+                <p>Five autonomous agents.</p>
+                <p>Deployed on decentralized infrastructure.</p>
+                <p>Production intelligence for the next generation.</p>
+            </div>
+
+            <!-- Enter Button -->
+            <a href="/studio" class="enter-experience">
+                <span class="enter-text">Enter The Studio</span>
+                <div class="enter-arrow">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M6 16h20M16 6l10 10-10 10" stroke="currentColor" stroke-width="2"/>
                     </svg>
-                </a>
-                <a href="#intelligence" class="btn-ghost">Explore Agents</a>
-            </div>
-            <div class="hero-metrics">
-                <div class="metric">
+                </div>
+            </a>
+
+            <!-- Metrics -->
+            <div class="key-metrics">
+                <div class="metric-item">
                     <div class="metric-value">±2%</div>
-                    <div class="metric-label">Cost Precision</div>
+                    <div class="metric-label">Cost Accuracy</div>
                 </div>
                 <div class="metric-divider"></div>
-                <div class="metric">
+                <div class="metric-item">
                     <div class="metric-value">30-50%</div>
                     <div class="metric-label">MOQ Reduction</div>
                 </div>
                 <div class="metric-divider"></div>
-                <div class="metric">
+                <div class="metric-item">
                     <div class="metric-value">95%</div>
-                    <div class="metric-label">On-Time</div>
+                    <div class="metric-label">On-Time Delivery</div>
                 </div>
                 <div class="metric-divider"></div>
-                <div class="metric">
+                <div class="metric-item">
                     <div class="metric-value">&lt;10%</div>
                     <div class="metric-label">Dead Stock</div>
                 </div>
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="scroll-line"></div>
-            <span>Scroll to explore</span>
-        </div>
-    </section>
 
-    <section class="manifesto" id="manifesto">
-        <div class="manifesto-content">
-            <div class="manifesto-label">The Problem</div>
-            <h2 class="manifesto-title">
-                Manufacturing knowledge<br/>
-                shouldn't be gatekept
-            </h2>
-            <div class="manifesto-grid">
-                <div class="manifesto-item">
-                    <div class="manifesto-number">01</div>
-                    <h4>Hidden Costs</h4>
-                    <p>Emerging brands overpay 40-60% on production because they lack manufacturing intelligence</p>
-                </div>
-                <div class="manifesto-item">
-                    <div class="manifesto-number">02</div>
-                    <h4>Impossible MOQs</h4>
-                    <p>1,000-unit minimums lock out indie brands while insiders negotiate down to 200</p>
-                </div>
-                <div class="manifesto-item">
-                    <div class="manifesto-number">03</div>
-                    <h4>Cash Flow Crises</h4>
-                    <p>30% of fashion startups fail from working capital gaps they never saw coming</p>
-                </div>
-            </div>
-            <div class="manifesto-solution">
-                <div class="solution-mark">◆</div>
-                <p>Atelier OS levels the playing field. Production intelligence, deployed as autonomous AI agents on decentralized infrastructure.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="intelligence" id="intelligence">
-        <div class="intelligence-header">
-            <div class="section-eyebrow">Five Specialist Agents</div>
-            <h2 class="section-title">Your Production<br/>Intelligence Team</h2>
-            <p class="section-desc">Deployed on Agentverse mainnet. Powered by MeTTa symbolic reasoning.<br/>Each agent masters one critical domain.</p>
         </div>
 
-        <div class="agents-showcase">
-            <div class="agent-card" data-agent="1">
-                <div class="agent-card-header">
-                    <div class="agent-icon">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                            <rect x="4" y="4" width="24" height="24" stroke="currentColor" stroke-width="1.5"/>
-                            <line x1="4" y1="12" x2="28" y2="12" stroke="currentColor" stroke-width="1.5"/>
-                            <line x1="12" y1="4" x2="12" y2="28" stroke="currentColor" stroke-width="1.5"/>
-                            <circle cx="16" cy="20" r="3" fill="currentColor"/>
-                        </svg>
-                    </div>
-                    <div class="agent-meta">
-                        <div class="agent-number">Agent 01</div>
-                        <h3 class="agent-name">BOM & Costing Specialist</h3>
-                    </div>
-                </div>
-                <p class="agent-desc">Calculate precise bills of materials with ±2% accuracy. Fabric consumption, trim costs, labor SAM, overhead, landed pricing—all regions, all materials.</p>
-                <div class="agent-capabilities">
-                    <span>Global Textile Pricing</span>
-                    <span>Landed Cost Engine</span>
-                    <span>7+ Manufacturing Regions</span>
-                </div>
-            </div>
-
-            <div class="agent-card" data-agent="2">
-                <div class="agent-card-header">
-                    <div class="agent-icon">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                            <path d="M16 4L4 10l12 6 12-6-12-6z" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                            <path d="M4 22l12 6 12-6M4 16l12 6 12-6" stroke="currentColor" stroke-width="1.5"/>
-                        </svg>
-                    </div>
-                    <div class="agent-meta">
-                        <div class="agent-number">Agent 02</div>
-                        <h3 class="agent-name">MOQ Negotiation Strategist</h3>
-                    </div>
-                </div>
-                <p class="agent-desc">Reduce minimums by 30-50% through strategic negotiation stacking. Multi-style commitment, off-peak timing, prepayment leverage—6 proven tactics.</p>
-                <div class="agent-capabilities">
-                    <span>Factory Economics</span>
-                    <span>6-Lever Framework</span>
-                    <span>Relationship Playbooks</span>
-                </div>
-            </div>
-
-            <div class="agent-card" data-agent="3">
-                <div class="agent-card-header">
-                    <div class="agent-icon">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                            <circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="1.5"/>
-                            <path d="M16 8v8l6 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <div class="agent-meta">
-                        <div class="agent-number">Agent 03</div>
-                        <h3 class="agent-name">Production Timeline Manager</h3>
-                    </div>
-                </div>
-                <p class="agent-desc">Map complete production schedules with 95% on-time accuracy. Tech pack to delivery, with critical path analysis and delay risk forecasting.</p>
-                <div class="agent-capabilities">
-                    <span>5-Phase Mapping</span>
-                    <span>Risk Assessment</span>
-                    <span>Fast-Track Options</span>
-                </div>
-            </div>
-
-            <div class="agent-card" data-agent="4">
-                <div class="agent-card-header">
-                    <div class="agent-icon">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                            <rect x="6" y="6" width="8" height="20" stroke="currentColor" stroke-width="1.5"/>
-                            <rect x="18" y="12" width="8" height="14" stroke="currentColor" stroke-width="1.5"/>
-                            <line x1="10" y1="2" x2="10" y2="6" stroke="currentColor" stroke-width="1.5"/>
-                            <line x1="22" y1="8" x2="22" y2="12" stroke="currentColor" stroke-width="1.5"/>
-                        </svg>
-                    </div>
-                    <div class="agent-meta">
-                        <div class="agent-number">Agent 04</div>
-                        <h3 class="agent-name">Inventory & Demand Forecaster</h3>
-                    </div>
-                </div>
-                <p class="agent-desc">Optimize inventory allocation to reduce dead stock below 10%. Demographic size curves, color distribution science, SKU complexity warnings.</p>
-                <div class="agent-capabilities">
-                    <span>Size Curve Analytics</span>
-                    <span>SKU Optimization</span>
-                    <span>Demographic Modeling</span>
-                </div>
-            </div>
-
-            <div class="agent-card" data-agent="5">
-                <div class="agent-card-header">
-                    <div class="agent-icon">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                            <line x1="16" y1="4" x2="16" y2="28" stroke="currentColor" stroke-width="1.5"/>
-                            <path d="M22 10c0-3.5-2.5-6-6-6s-6 2.5-6 6" stroke="currentColor" stroke-width="1.5"/>
-                            <path d="M10 22c0 3.5 2.5 6 6 6s6-2.5 6-6" stroke="currentColor" stroke-width="1.5"/>
-                        </svg>
-                    </div>
-                    <div class="agent-meta">
-                        <div class="agent-number">Agent 05</div>
-                        <h3 class="agent-name">Cash Flow Financial Planner</h3>
-                    </div>
-                </div>
-                <p class="agent-desc">Model complete cash flow with 100% visibility. Track deposits, production payments, DTC revenue—identify capital gaps before they become crises.</p>
-                <div class="agent-capabilities">
-                    <span>Breakeven Analysis</span>
-                    <span>Working Capital</span>
-                    <span>3-Scenario Modeling</span>
-                </div>
-            </div>
+        <!-- Tech Stack Footer -->
+        <div class="tech-footer">
+            <div class="tech-item">Fetch.ai uAgents</div>
+            <div class="tech-divider">·</div>
+            <div class="tech-item">SingularityNET MeTTa</div>
+            <div class="tech-divider">·</div>
+            <div class="tech-item">Agentverse Mainnet</div>
         </div>
+    </main>
 
-        <div class="intelligence-cta">
-            <a href="/studio" class="btn-intelligence">
-                <span>Discuss with Agents</span>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M1 8h14M8 1l7 7-7 7" stroke="currentColor" stroke-width="1.5"/>
-                </svg>
-            </a>
-        </div>
-    </section>
+    <!-- Grain Texture Overlay -->
+    <div class="grain-overlay"></div>
 
-    <section class="craft" id="craft">
-        <div class="craft-header">
-            <div class="section-eyebrow">Built on ASI Alliance</div>
-            <h2 class="section-title">Decentralized by Design</h2>
-        </div>
-        <div class="craft-content">
-            <div class="craft-text">
-                <p class="craft-intro">All five agents run on Agentverse mainnet—autonomous, resilient, always available. Powered by Fetch.ai uAgents and SingularityNET MeTTa symbolic reasoning.</p>
-                <div class="craft-stack">
-                    <div class="stack-item">
-                        <div class="stack-label">Agent Framework</div>
-                        <div class="stack-value">Fetch.ai uAgents v0.12</div>
-                    </div>
-                    <div class="stack-item">
-                        <div class="stack-label">Reasoning Engine</div>
-                        <div class="stack-value">SingularityNET MeTTa</div>
-                    </div>
-                    <div class="stack-item">
-                        <div class="stack-label">Deployment</div>
-                        <div class="stack-value">Agentverse Mainnet</div>
-                    </div>
-                    <div class="stack-item">
-                        <div class="stack-label">Knowledge Graph</div>
-                        <div class="stack-value">3,000+ Production Rules</div>
-                    </div>
-                </div>
-            </div>
-            <div class="craft-visual">
-                <div class="agent-network">
-                    <div class="network-ring"></div>
-                    <div class="network-nodes">
-                        <div class="node" style="--angle: 0deg">BOM</div>
-                        <div class="node" style="--angle: 72deg">MOQ</div>
-                        <div class="node" style="--angle: 144deg">Timeline</div>
-                        <div class="node" style="--angle: 216deg">Inventory</div>
-                        <div class="node" style="--angle: 288deg">Cash Flow</div>
-                    </div>
-                    <div class="network-center">
-                        <div class="center-icon">◆</div>
-                        <div class="center-label">ASI Alliance</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="finale">
-        <div class="finale-content">
-            <div class="finale-mark">◆</div>
-            <h2 class="finale-title">Build with Intelligence</h2>
-            <p class="finale-subtitle">Join emerging brands using autonomous AI to navigate production complexity</p>
-            <a href="/studio" class="btn-finale">
-                <span>Enter Atelier Studio</span>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path d="M2 10h16M10 2l8 8-8 8" stroke="currentColor" stroke-width="2"/>
-                </svg>
-            </a>
-            <div class="finale-meta">5 agents deployed · Mainnet ready · No login required</div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <div class="footer-logo">
-                    <span class="brand-icon">◆</span>
-                    ATELIER OS
-                </div>
-                <p>Intelligence infrastructure for fashion</p>
-            </div>
-            <div class="footer-column">
-                <h4>Platform</h4>
-                <a href="/studio">Launch Studio</a>
-                <a href="#intelligence">Agents</a>
-                <a href="#craft">Technology</a>
-            </div>
-            <div class="footer-column">
-                <h4>ASI Alliance</h4>
-                <a href="https://fetch.ai" target="_blank">Fetch.ai</a>
-                <a href="https://singularitynet.io" target="_blank">SingularityNET</a>
-                <a href="https://agentverse.ai" target="_blank">Agentverse</a>
-            </div>
-            <div class="footer-column">
-                <h4>Resources</h4>
-                <a href="https://github.com/0xdarknight/AtelierOS" target="_blank">GitHub</a>
-                <a href="https://deltav.agentverse.ai" target="_blank">DeltaV Chat</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <span>Atelier OS v1.0</span>
-            <span class="footer-divider">·</span>
-            <span>Decentralized AI for Fashion</span>
-            <span class="footer-divider">·</span>
-            <span>Built on ASI Alliance</span>
-        </div>
-    </footer>
-
-    <script src="landing.js"></script>
 </body>
 </html>
