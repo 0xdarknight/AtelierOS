@@ -7,7 +7,7 @@
 
 ## TL,DR
 
-Atelier OS is a multi agent system using the full ASI Alliance technology stack (Fetch.ai uAgents + SingularityNET MeTTa) to solve extreme inefficiencies in fashion supply chain management. The platform achieves ±2% cost accuracy, 30-50% MOQ reduction and 95% on-time delivery. 
+Atelier OS is my multi agent system using the full ASI Alliance technology stack (Fetch.ai uAgents + SingularityNET MeTTa) to solve extreme inefficiencies in fashion supply chain management. The platform achieves ±2% cost accuracy, 30-50% MOQ reduction and 95% on-time delivery. 
 
 ## Architecture
 
